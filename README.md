@@ -4,9 +4,9 @@ Create Domino Cards for ESL conversation classes (or just for a fun evening with
 ### features
 - automatically creates ready-to-print taboo cards from list of words
 - rich database of word associations: taboo are made with word association data from:
-* [Edinburgh Associative Thesaurus (EAT)](http://www.eat.rl.ac.uk/)
-* [University of South Florida Free Association Norms (USF-FAN)](http://w3.usf.edu/FreeAssociation/)
-* [wordassociation.org](http://www.wordassociation.org/about/)
+ * [Edinburgh Associative Thesaurus (EAT)](http://www.eat.rl.ac.uk/)
+ * [University of South Florida Free Association Norms (USF-FAN)](http://w3.usf.edu/FreeAssociation/)
+ * [wordassociation.org](http://www.wordassociation.org/about/)
 - perfect for recycling vocabulary in ESL classrooms
 - activate vocabulary by focusing on word associations, paraphrasing and speaking abilities
 - tiny code / no external dependencies (vanilla javascript)
