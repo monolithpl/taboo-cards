@@ -57,7 +57,7 @@ function addWord(word){
 		entry.id = "card-" + word
 		id = 'card' + word
 		entry.innerHTML = '<h1>' + word + '</h1><ul class="cardList" id="' + id + '"></ul>'
-		var cards = document.getElementById('mainx')
+		var cards = document.getElementById('taboocards')
 		cards.insertBefore(entry, cards.childNodes[0])
 		
 		wordElement = document.getElementById(id)
