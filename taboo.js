@@ -37,10 +37,34 @@ function loadDict() {
 	})
 }
 
-var newWord = document.getElementById("word-new");
-var list = document.getElementById("word-list");
-var count = document.getElementById("word-count");
-var wordArray = [];
+var newWord = document.getElementById("word-new")
+var list = document.getElementById("word-list")
+var demo = document.getElementById("demo");
+var count = document.getElementById("word-count")
+var wordArray = []
+
+function addWord(word){
+	for (var i = 0; i < arguments.length; ++i) {
+		var word = arguments[i]
+		
+		var entry = document.createElement('li')
+		entry.innerHTML = '<label>' + word + '</label><button class="destroy"></button>'
+		list.insertBefore(entry, list.childNodes[0])
+		wordArray.push(word)
+		
+		var entry = document.createElement('div')
+		entry.className = "card"
+		entry.id = "card-" + word
+		id = 'card' + word
+		entry.innerHTML = '<h1>' + word + '</h1><ul class="cardList" id="' + id + '"></ul>'
+		var cards = document.getElementById('mainx')
+		cards.insertBefore(entry, cards.childNodes[0])
+		
+		wordElement = document.getElementById(id)
+		search(word)
+		updateCount()
+	}
+}
 
 function updateCount(){
 	document.getElementById('instructions').innerHTML = ''
@@ -53,32 +77,23 @@ list.addEventListener("click", function(event) {
     if (event.target !== event.currentTarget) {
         if (event.target.className == "destroy")
 		{
-			wordArray.splice(wordArray.indexOf(event.target.parentElement.getElementsByTagName("LABEL")[0].innerHTML), 1);
+			wordArray.splice(wordArray.indexOf(event.target.parentElement.getElementsByTagName("LABEL")[0].innerHTML), 1)
 			event.target.parentElement.parentNode.removeChild(event.target.parentElement)
 			updateCount()
+			var wordCard = document.getElementById('card-' + event.target.parentElement.getElementsByTagName("LABEL")[0].innerHTML)
+			wordCard.parentNode.removeChild(wordCard)
 		}
     }
-    event.stopPropagation();
-});
+    event.stopPropagation()
+})
+
+demo.addEventListener("click", function(event) {
+	addWord('learning', 'speaking', 'doing', 'city', 'happy', 'sunny', 'design', 'active')
+})
 
 newWord.addEventListener("keypress", function(event) {
-    if (event.keyCode == 13)
-	{
-		var entry = document.createElement('li')
-		entry.innerHTML = '<label>' + newWord.value + '</label><button class="destroy"></button>'
-		list.insertBefore(entry, list.childNodes[0])
-		wordArray.push(newWord.value)
-		
-		var entry = document.createElement('div')
-		entry.className = "card"
-		var id = 'card' + newWord.value
-		entry.innerHTML = '<h1>' + newWord.value + '</h1><ul class="cardList" id="' + id + '"></ul>'
-		var cards = document.getElementById('mainx')
-		cards.insertBefore(entry, cards.childNodes[0])
-		
-		wordElement = document.getElementById(id)
-		search(newWord.value)
+    if (event.keyCode == 13 && newWord.value.trim() !== '') {
+		addWord(newWord.value)
 		newWord.value = ''
-		updateCount()
 	}
-});
+})

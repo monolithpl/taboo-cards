@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
-<title>Taboo Cards Wizard</title>
+<title>Taboo Cards</title>
 <head>
 <meta charset="utf-8">
 <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
 <style>
+button {
+	padding: 5px;
+	cursor: pointer;
+	border: 2px solid black;
+	background-color: white;
+	color: black;
+	font-family: 'Merriweather', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+button:hover{
+	background-color: black;
+	color: white;
+}
 .cardList{
 	font-size: 1.4em;
 	line-height: 1.3em;
@@ -15,7 +29,7 @@
 	width: 200px;
 	border: 1px solid gray;
 	box-shadow: 1px 1px 3px #888;
-	border-top: 30px solid #808080;
+	border-top: 30px solid #AD7FBE;
 	min-height: 250px;
 	padding: 5px;
 	margin: 2px;
@@ -303,9 +317,10 @@ li { list-style-type: none;}
 	font-size: 15px;
 }
 
-h1 {
+h1, h3 {
 	font-family: 'Merriweather', serif;
     margin:auto;
+	line-height: 20px;
 }
 
 * {
@@ -402,7 +417,8 @@ html, body {
 <div id="wrapper" class="wrapper">
   <div id="container" class="container">
     <header id="header-main" class="header-main no-print" role="banner">
-		<h1>Taboo Cards Wizard</h1>
+		<h1>Taboo Cards</h1>
+		<h3>for ESL conversation classes</h3>
     </header>
     <div id="side-a" class="side-a no-print">
       <nav id="main-menu" class="main-menu" role="navigation">
@@ -421,7 +437,7 @@ html, body {
       </nav>
     </div>
     <div id="mainx" class="main two-column">
-		<div id="instructions">To create taboo cards, first enter some words in the panel on the left.</div>
+		<div id="instructions">To create your taboo cards, enter some words in the panel on the left.</br>Or for a quick demo click here: <button id="demo">demo</button></div>
     </div>
   </div>
 </div>
