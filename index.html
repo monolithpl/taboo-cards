@@ -44,7 +44,10 @@ button:hover{
     {
         display: none !important;
     }
-	table {page-break-inside: avoid;}
+	table {page-break-inside: avoid !important}
+	html, body {margin: 0;padding: 0;background-color: white !important}
+	.main {border: none !important}
+	.container{padding:0}
 }
 #word-count {
 	top: -0.4em;
@@ -165,7 +168,7 @@ li { list-style-type: none;}
 	z-index: 2;
 }
 
-#mainx {
+#taboocards {
 	font-family: calibri;
 	box-sizing: border-box;
 	justify-content: center;
@@ -436,7 +439,7 @@ html, body {
 		</div>
       </nav>
     </div>
-    <div id="mainx" class="main two-column">
+    <div id="taboocards" class="main two-column">
 		<div id="instructions">To create your taboo cards, enter some words in the panel on the left.</br>Or for a quick demo click here: <button id="demo">demo</button></div>
     </div>
   </div>
