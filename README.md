@@ -3,7 +3,7 @@ Create Domino Cards for ESL conversation classes (or just for a fun evening with
 
 ### features
 - automatically creates ready-to-print taboo cards from list of words
-- rich database of word associations: cards are generated with word association data from:
+- rich database of word associations that builds upon the association dictionary, the most comprehensive dictionary of word associations today, combining data from:
  * [Edinburgh Associative Thesaurus (EAT)](http://www.eat.rl.ac.uk/)
  * [University of South Florida Free Association Norms (USF-FAN)](http://w3.usf.edu/FreeAssociation/)
  * [wordassociation.org](http://www.wordassociation.org/about/)
