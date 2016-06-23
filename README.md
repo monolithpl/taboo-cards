@@ -19,6 +19,8 @@ Create Domino Cards for ESL conversation classes (or just for a fun evening with
 ### demo
 [check it out here](http://monolithpl.github.io/taboo-cards/)
 
+### technical implementation
+- uses the [associations dictionary](https://github.com/monolithpl/associations.dictionary)
 ### further reading
 
 ### technical implementation
