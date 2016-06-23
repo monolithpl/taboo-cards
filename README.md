@@ -1,5 +1,5 @@
-# domino-wizard
-Create Domino Cards for ESL conversation classes (or just for a fun evening with friends) with simple to use [wizard](http://monolithpl.github.io/taboo-cards/)
+# taboo cards
+Create Taboo Cards for ESL conversation classes (or just for a fun evening with friends) with simple to use [wizard](http://monolithpl.github.io/taboo-cards/)
 
 ### features
 - automatically creates ready-to-print taboo cards from list of words
@@ -24,7 +24,6 @@ Create Domino Cards for ESL conversation classes (or just for a fun evening with
 
 ### further reading
 
-### technical implementation
 MIT License
 
 Copyright 2016 Wiktor Jakubczyc
