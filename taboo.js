@@ -21,7 +21,12 @@ function search(word) {
 	if(typeof dict == "undefined" || typeof lookup_tbl == "undefined") return
 	var idx_obj = lookup_tbl[word]
 	if(typeof idx_obj != "undefined") dict.entry(idx_obj.dictpos).then( function(entry) {
-		document.getElementById('card' + word).innerHTML = '<li>' + entry.replace(/,/g,'</li><li>') + '</li>'
+		var associations = entry.split(',')
+		var cardtext = ''
+		for (var i=0; i<5; i++){
+			 cardtext += '<li>' + associations[i] + '</li>'
+		}
+		document.getElementById('card' + word).innerHTML = cardtext
 	})
 }
 
